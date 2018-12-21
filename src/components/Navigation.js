@@ -6,8 +6,6 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
 //Navigation
-import { Route, Switch } from "react-router-dom";
-import { withRouter } from "react-router-dom";
 
 const styles = theme => ({});
 
@@ -23,10 +21,7 @@ class Navigation extends React.Component {
       <div>
         <main>
           <div />
-          <Switch>
-            <Route path="/" exact render={props => <p>text</p>} />
-            <Route path="/api" exact render={props => <p>api</p>} />
-          </Switch>
+          <p>Sorry no react router</p>
         </main>
       </div>
     );
@@ -38,4 +33,4 @@ Navigation.propTypes = {
   theme: PropTypes.object.isRequired
 };
 
-export default withRouter(withStyles(styles, { withTheme: true })(Navigation));
+export default withStyles(styles, { withTheme: true }(Navigation));
