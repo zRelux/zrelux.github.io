@@ -33,4 +33,4 @@ Navigation.propTypes = {
   theme: PropTypes.object.isRequired
 };
 
-export default withStyles(styles, { withTheme: true }(Navigation));
+export default withStyles(styles, { withTheme: true })(Navigation);
