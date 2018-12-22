@@ -6,10 +6,6 @@ import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-
-import ProfileCard from "./ProfileCard";
-import Introduction from "./Introduction";
-
 import classNames from "classnames";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -19,6 +15,11 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+
+import ProfileCard from "./ProfileCard";
+import Introduction from "./Introduction";
+import About from "./About";
+import Projects from "./Projects";
 
 const drawerWidth = 240;
 
@@ -140,9 +141,12 @@ class Navigation extends React.Component {
           <section>
             <Introduction open={open} />
           </section>
-          <section>fsgsgsdg</section>
-          <section>fsgsgsdg</section>
-          <section>fsgsgsdg</section>
+          <section id="About" ref="About">
+            <About />
+          </section>
+          <section id="Projects" ref="Projects">
+            <Projects />
+          </section>
         </main>
       </div>
     );
