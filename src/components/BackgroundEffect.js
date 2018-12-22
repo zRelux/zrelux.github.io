@@ -4,8 +4,6 @@ import { withStyles } from "@material-ui/core/styles";
 
 import Particles from "react-particles-js";
 
-const drawerWidth = 240;
-
 const styles = theme => ({
   body: {
     backgroundColor: "#222"

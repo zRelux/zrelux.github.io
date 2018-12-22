@@ -11,7 +11,8 @@
     "react-dom": "^16.7.0",
     "react-particles-js": "^2.4.2",
     "react-scripts": "2.1.1",
-    "react-scrollspy": "^3.3.5"
+    "react-scrollspy": "^3.3.5",
+    "react-typing-animation": "^1.5.1"
   },
   "scripts": {
     "predeploy": "yarn run build",

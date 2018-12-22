@@ -4,6 +4,8 @@ import BackgroundEffect from "./BackgroundEffect.js";
 //material imports
 import { withStyles } from "@material-ui/core/styles";
 
+import Showcard from "./Showcard";
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -45,6 +47,7 @@ class Introduction extends React.Component {
   render() {
     const { width, height } = this.state;
     const { classes, open } = this.props;
+
     return (
       <div className={classes.container} style={{ height: height }}>
         <div className={classes.effect}>
@@ -55,9 +58,17 @@ class Introduction extends React.Component {
         </div>
         <div
           className={classes.introduction}
-          style={{ left: width / 2, top: height / 2 }}
+          style={
+            open
+              ? {
+                  marginLeft: 100,
+                  left: width / 2 - 165,
+                  top: height / 2 - 60
+                }
+              : { left: width / 2 - 165, top: height / 2 - 60 }
+          }
         >
-          Fraa
+          <Showcard />
         </div>
       </div>
     );
