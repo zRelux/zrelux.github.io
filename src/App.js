@@ -2,13 +2,19 @@ import React, { Component } from "react";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { purple, green } from "@material-ui/core/colors/";
+import { green } from "@material-ui/core/colors/";
 
 import Navigation from "./components/Navigation";
+import "./assets/css/main.css";
 
 const theme = createMuiTheme({
+  typography: {
+    useNextVariants: true
+  },
   palette: {
-    primary: purple,
+    primary: {
+      main: "#04C2C9"
+    },
     secondary: green
   },
   status: {
