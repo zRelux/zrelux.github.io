@@ -59,8 +59,8 @@ class Introduction extends React.Component {
               About
             </Typography>
           </Grid>
-          <Grid item xs={3} />
-          <Grid item xs={6}>
+          <Grid item xs={1} sm={2} />
+          <Grid item xs={10} sm={8}>
             <Card profile className={classes.card}>
               <CardAvatar profile>
                 <img src={avatar} alt="avatar" />
@@ -90,12 +90,12 @@ class Introduction extends React.Component {
               </CardBody>
             </Card>
           </Grid>
-          <Grid item xs={3} />
-          <Grid item xs={3} />
-          <Grid item xs={6}>
+          <Grid item xs={1} sm={2} />
+          <Grid item xs={1} sm={2} />
+          <Grid item xs={10} sm={8}>
             <Divider />
           </Grid>
-          <Grid item xs={3} />
+          <Grid item xs={1} sm={2} />
         </Grid>
       </div>
     );

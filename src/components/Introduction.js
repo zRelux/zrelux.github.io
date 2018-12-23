@@ -47,12 +47,21 @@ class Introduction extends React.Component {
   render() {
     const { width, height } = this.state;
     const { classes, open } = this.props;
+    console.log(width);
 
     return (
       <div className={classes.container} style={{ height: height }}>
         <div className={classes.effect}>
           <BackgroundEffect
-            width={open ? width - drawerWidth - 16 : width - 16}
+            width={
+              open
+                ? width <= 500
+                  ? width - drawerWidth
+                  : width - drawerWidth - 16
+                : width <= 500
+                ? width
+                : width - 16
+            }
             height={height}
           />
         </div>
