@@ -13,7 +13,7 @@ const styles = theme => ({
 class BackgroundEffect extends React.Component {
   render() {
     const { classes, width, height } = this.props;
-    console.log(classes, width, height);
+
     return (
       <Particles
         canvasClassName={classes.body}

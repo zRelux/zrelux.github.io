@@ -58,7 +58,12 @@ class Showcard extends React.Component {
           <Typography variant="h5">I am a full stack developer.</Typography>
         </div>
         <div className={classes.center}>
-          <Button variant="outlined" color="primary" className={classes.button}>
+          <Button
+            variant="outlined"
+            color="primary"
+            className={classes.button}
+            onClick={this.viewWork}
+          >
             View my work
           </Button>
         </div>

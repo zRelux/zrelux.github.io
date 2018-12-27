@@ -138,7 +138,7 @@ class Navigation extends React.Component {
           })}
         >
           <div className={classes.drawerHeader} />
-          <section>
+          <section id="Introduction" ref="Introduction">
             <Introduction open={open} />
           </section>
           <section id="About" ref="About">

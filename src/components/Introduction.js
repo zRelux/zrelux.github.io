@@ -47,7 +47,6 @@ class Introduction extends React.Component {
   render() {
     const { width, height } = this.state;
     const { classes, open } = this.props;
-    console.log(width);
 
     return (
       <div className={classes.container} style={{ height: height }}>
