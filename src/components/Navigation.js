@@ -16,10 +16,11 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 
-import ProfileCard from "./ProfileCard";
-import Introduction from "./Introduction";
-import About from "./About";
-import Projects from "./Projects";
+import ProfileCard from "./introduction/ProfileCard";
+
+import Introduction from "./introduction/index";
+import About from "./about/index";
+import Projects from "./projects/index";
 
 const drawerWidth = 240;
 
@@ -146,6 +147,9 @@ class Navigation extends React.Component {
           </section>
           <section id="Projects" ref="Projects">
             <Projects />
+          </section>
+          <section id="About" ref="About">
+            <About />
           </section>
         </main>
       </div>
