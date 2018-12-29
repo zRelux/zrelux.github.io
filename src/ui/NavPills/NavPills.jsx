@@ -231,7 +231,6 @@ NavPills.defaultProps = {
 
 NavPills.propTypes = {
   classes: PropTypes.object.isRequired,
-  // index of the default active pill
   active: PropTypes.number,
   tabs: PropTypes.arrayOf(
     PropTypes.shape({

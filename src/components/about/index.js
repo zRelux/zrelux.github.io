@@ -53,7 +53,7 @@ class Introduction extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Grid container spacing={24}>
+        <Grid container>
           <Grid item xs={12}>
             <Typography variant="h4" className={classes.about}>
               About

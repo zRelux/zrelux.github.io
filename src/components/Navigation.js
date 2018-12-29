@@ -148,8 +148,8 @@ class Navigation extends React.Component {
           <section id="Projects" ref="Projects">
             <Projects />
           </section>
-          <section id="About" ref="About">
-            <About />
+          <section id="Skills" ref="Skills">
+            <p>Skills</p>
           </section>
         </main>
       </div>
@@ -158,6 +158,7 @@ class Navigation extends React.Component {
 }
 
 /*
+
 drawer: {
     width: drawerWidth,
     flexShrink: 0

@@ -1,14 +1,16 @@
 import React from "react";
-//material imports
+
+//Material imports
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
-
+//Icons
 import Dashboard from "@material-ui/icons/Dashboard";
 import Code from "@material-ui/icons/Code";
-
 import NavPills from "../../ui/NavPills/NavPills.jsx";
+
+import Projects from "./Projects";
 
 const styles = theme => ({
   root: {
@@ -46,7 +48,7 @@ const styles = theme => ({
   }
 });
 
-class Projects extends React.Component {
+class ProjectsScreen extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -57,68 +59,37 @@ class Projects extends React.Component {
               Projects
             </Typography>
           </Grid>
-          <Grid item xs={2} />
-          <Grid item xs={8}>
+          <Grid item sm={2} />
+          <Grid item xs={12} sm={8}>
             <NavPills
               horizontal={{
-                tabsGrid: { xs: 12, sm: 4, md: 4 },
-                contentGrid: { xs: 12, sm: 8, md: 8 }
+                tabsGrid: { xs: 12, sm: 12, md: 2 },
+                contentGrid: { xs: 12, sm: 12, md: 10 }
               }}
               tabs={[
                 {
                   tabButton: "All",
                   tabIcon: Dashboard,
-                  tabContent: (
-                    <span>
-                      <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits.
-                      </p>
-                      <br />
-                      <p>
-                        Dramatically visualize customer directed convergence
-                        without revolutionary ROI. Collaboratively administrate
-                        empowered markets via plug-and-play networks.
-                        Dynamically procrastinate B2C users after installed base
-                        benefits.
-                      </p>
-                      <br />
-                      <p>This is very nice.</p>
-                    </span>
-                  )
+                  tabContent: <Projects filter=" " />
                 },
                 {
                   tabButton: "PHP",
                   tabIcon: Code,
-                  tabContent: (
-                    <span>
-                      <p>
-                        Efficiently unleash cross-media information without
-                        cross-media value. Quickly maximize timely deliverables
-                        for real-time schemas.
-                      </p>
-                      <br />
-                      <p>
-                        Dramatically maintain clicks-and-mortar solutions
-                        without functional solutions.
-                      </p>
-                    </span>
-                  )
+                  tabContent: <Projects filter="PHP" />
                 }
               ]}
             />
           </Grid>
-          <Grid item xs={2} />
+          <Grid item sm={2} />
           <Grid item xs={1} sm={2} />
           <Grid item xs={10} sm={8}>
             <Divider />
           </Grid>
-          <Grid item xs={1} sm={2} />
+          <Grid item xs sm={2} />
         </Grid>
       </div>
     );
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Projects);
+export default withStyles(styles, { withTheme: true })(ProjectsScreen);
