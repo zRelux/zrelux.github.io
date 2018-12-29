@@ -53,16 +53,53 @@ class ProjectsScreen extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Grid container spacing={24}>
+        <Grid container>
           <Grid item xs={12}>
             <Typography variant="h4" className={classes.about}>
               Projects
             </Typography>
           </Grid>
-          <Grid item sm={2} />
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={1} sm={2} />
+          <Grid item xs={10} sm={8}>
             <NavPills
               horizontal={{
+                tabsGrid: { xs: 12, sm: 12, md: 2 },
+                contentGrid: { xs: 12, sm: 12, md: 10 }
+              }}
+              tabs={[
+                {
+                  tabButton: "All",
+                  tabIcon: Dashboard,
+                  tabContent: <Projects filter=" " />
+                },
+                {
+                  tabButton: "PHP",
+                  tabIcon: Code,
+                  tabContent: <Projects filter="PHP" />
+                },
+                {
+                  tabButton: "Java",
+                  tabIcon: Code,
+                  tabContent: <Projects filter="Java," />
+                }
+              ]}
+            />
+          </Grid>
+          <Grid item xs={1} sm={2} />
+          <Grid item xs={1} sm={2} />
+          <Grid item xs={10} sm={8}>
+            <Divider />
+          </Grid>
+          <Grid item xsxs={1} sm={2} />
+        </Grid>
+      </div>
+    );
+  }
+}
+
+export default withStyles(styles, { withTheme: true })(ProjectsScreen);
+/* <NavPills
+horizontal={{
                 tabsGrid: { xs: 12, sm: 12, md: 2 },
                 contentGrid: { xs: 12, sm: 12, md: 10 }
               }}
@@ -79,17 +116,5 @@ class ProjectsScreen extends React.Component {
                 }
               ]}
             />
-          </Grid>
-          <Grid item sm={2} />
-          <Grid item xs={1} sm={2} />
-          <Grid item xs={10} sm={8}>
-            <Divider />
-          </Grid>
-          <Grid item xs sm={2} />
-        </Grid>
-      </div>
-    );
-  }
-}
 
-export default withStyles(styles, { withTheme: true })(ProjectsScreen);
+               */
