@@ -33,6 +33,14 @@ const styles = theme => ({
 });
 
 class Showcard extends React.Component {
+  viewWork = () => {
+    var aboutSection = document.getElementById("About");
+    window.scrollTo({
+      top: aboutSection.offsetTop - 75,
+      behavior: "smooth"
+    });
+  };
+
   render() {
     const { classes } = this.props;
     return (

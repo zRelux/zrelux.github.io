@@ -36,7 +36,8 @@ const styles = theme => ({
   },
   cardAvatar: {
     overflowX: "hidden",
-    overflowY: "hidden"
+    overflowY: "hidden",
+    height: 290
   }
 });
 

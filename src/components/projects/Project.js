@@ -101,9 +101,7 @@ class Project extends React.Component {
             <Typography variant="h6" id="modal-title">
               Text in a modal
             </Typography>
-            <Typography variant="subtitle1" id="simple-modal-description">
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <Typography variant="subtitle1" id="simple-modal-description" />
           </div>
         </Modal>
       </>

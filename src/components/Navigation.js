@@ -13,8 +13,13 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+
+import AboutIcon from "@material-ui/icons/Person";
+import ProjectsIcon from "@material-ui/icons/Assessment";
+import SkillsIcon from "@material-ui/icons/BarChart";
+import EducationIcon from "@material-ui/icons/School";
+import ContactIcon from "@material-ui/icons/Email";
+import ResumeIcon from "@material-ui/icons/Description";
 
 import ProfileCard from "./introduction/ProfileCard";
 
@@ -71,24 +76,60 @@ const styles = theme => ({
     }),
     marginLeft: 0
   },
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    marginBottom: 50
+  },
   middleContent: {
     margingLeft: 100
   }
 });
 
-const nav = ["About", "Projects", "Skills", "Education", "Contact", "Resume"];
+const nav = [
+  {
+    title: "About",
+    icon: <AboutIcon />
+  },
+  {
+    title: "Projects",
+    icon: <ProjectsIcon />
+  },
+  {
+    title: "Skills",
+    icon: <SkillsIcon />
+  },
+  {
+    title: "Education",
+    icon: <EducationIcon />
+  },
+  {
+    title: "Contact",
+    icon: <ContactIcon />
+  },
+  {
+    title: "Resume",
+    icon: <ResumeIcon />
+  }
+];
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      open: false
+      open: false,
+      selectedIndex: 0
     };
   }
 
   handleToggleDrawer = () => {
     this.setState({ open: !this.state.open });
+  };
+
+  handleListItemClick = (event, index, title) => {
+    this.setState({ selectedIndex: index });
+    window.scrollTo({
+      top: this.refs[title].offsetTop - 75,
+      behavior: "smooth"
+    });
   };
 
   render() {
@@ -121,14 +162,21 @@ class Navigation extends React.Component {
           }}
         >
           <div className={classes.toolbar} />
-          <ProfileCard />
-          <List>
-            {nav.map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
+          <div className={classes.profile}>
+            <ProfileCard />
+          </div>
+          <List component="nav">
+            {nav.map((section, index) => (
+              <ListItem
+                button
+                selected={this.state.selectedIndex === index}
+                onClick={event =>
+                  this.handleListItemClick(event, index, section.title)
+                }
+                key={section.title}
+              >
+                <ListItemIcon>{section.icon}</ListItemIcon>
+                <ListItemText primary={section.title} />
               </ListItem>
             ))}
           </List>
