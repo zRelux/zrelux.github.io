@@ -1,7 +1,6 @@
 import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
 
 import Project from "./Project";
 
@@ -62,9 +61,9 @@ class Projects extends React.Component {
     const { classes, filter } = this.props;
     return projects.map((item, i) =>
       item.languages.includes(filter) ? (
-        <Grid key={i} item xs={12} sm={4} className={classes.root}>
+        <div key={i} className={classes.root}>
           <Project item={item} className={classes.project} />
-        </Grid>
+        </div>
       ) : null
     );
   }

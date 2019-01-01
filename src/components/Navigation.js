@@ -23,9 +23,10 @@ import ResumeIcon from "@material-ui/icons/Description";
 
 import ProfileCard from "./introduction/ProfileCard";
 
-import Introduction from "./introduction/index";
-import About from "./about/index";
-import Projects from "./projects/index";
+import Introduction from "./introduction/";
+import About from "./about/";
+import Projects from "./projects/";
+import Skills from "./skills/";
 
 const drawerWidth = 240;
 
@@ -193,53 +194,17 @@ class Navigation extends React.Component {
           <section id="About" ref="About">
             <About />
           </section>
+
           <section id="Projects" ref="Projects">
             <Projects />
           </section>
           <section id="Skills" ref="Skills">
-            <p>Skills</p>
+            <Skills />
           </section>
         </main>
       </div>
     );
   }
 }
-
-/*
-
-drawer: {
-    width: drawerWidth,
-    flexShrink: 0
-  },
-  drawerPaper: {
-    width: drawerWidth
-  },
-  content: {
-    backgroundColor: theme.palette.background.default,
-    marginLeft: drawerWidth,
-    overflowX: "hidden"
-  },
-  isCurrent: {
-    color: "blue"
-  }
-  
-<Drawer
-          className={classes.drawer}
-          variant="persistent"
-          classes={{
-            paper: classes.drawerPaper
-          }}
-          anchor="left"
-        >
-          <ProfileCard />
-          <Divider />
-          <List>
-            {nav.map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-        </Drawer>
-*/
+//TODO: Fix projects tab for mobile and desktop
 export default withStyles(styles, { withTheme: true })(Navigation);
