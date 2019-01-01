@@ -2,7 +2,7 @@ import React from "react";
 
 import ItiImage from "../../assets/img/iti.png";
 import Course from "./Course";
-import { Grid, withStyles } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 
 const courses = [
   {
