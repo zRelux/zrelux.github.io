@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 
-import Skills from "./Skills";
+import Courses from "./Courses";
 
 const styles = theme => ({
   root: {
@@ -21,7 +21,7 @@ const styles = theme => ({
   }
 });
 
-class SkillsScreen extends React.Component {
+class CourseScreen extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -29,14 +29,14 @@ class SkillsScreen extends React.Component {
         <Grid container>
           <Grid item xs={12}>
             <Typography variant="h4" className={classes.about}>
-              Skills
+              Education
             </Typography>
           </Grid>
-          <Grid item xs={1} sm={2} />
-          <Grid item xs={10} sm={8}>
-            <Skills />
+          <Grid item xs={2} sm={4} />
+          <Grid item xs={8} sm={4}>
+            <Courses />
           </Grid>
-          <Grid item xs={1} sm={2} />
+          <Grid item xs={2} sm={4} />
           <Grid item xs={1} sm={2} />
           <Grid item xs={10} sm={8}>
             <Divider />
@@ -48,4 +48,4 @@ class SkillsScreen extends React.Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(SkillsScreen);
+export default withStyles(styles, { withTheme: true })(CourseScreen);

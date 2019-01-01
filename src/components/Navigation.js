@@ -27,6 +27,7 @@ import Introduction from "./introduction/";
 import About from "./about/";
 import Projects from "./projects/";
 import Skills from "./skills/";
+import Education from "./education/";
 
 const drawerWidth = 240;
 
@@ -201,7 +202,7 @@ class Navigation extends React.Component {
             <Skills />
           </section>
           <section id="Education" ref="Education">
-            <p>Ciao</p>
+            <Education />
           </section>
         </main>
       </div>
