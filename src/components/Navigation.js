@@ -194,12 +194,14 @@ class Navigation extends React.Component {
           <section id="About" ref="About">
             <About />
           </section>
-
           <section id="Projects" ref="Projects">
             <Projects />
           </section>
           <section id="Skills" ref="Skills">
             <Skills />
+          </section>
+          <section id="Education" ref="Education">
+            <p>Ciao</p>
           </section>
         </main>
       </div>

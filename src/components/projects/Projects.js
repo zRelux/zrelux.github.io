@@ -7,15 +7,20 @@ import Project from "./Project";
 import LuxImage from "../../assets/img/LuxuryConstruction.png";
 import AzieImage from "../../assets/img/AziendeExpo.png";
 import LibImage from "../../assets/img/imageFrame.png";
+import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
-    display: "inline-block",
-    marginBottom: 15,
-    marginLeft: 15,
-    minWidth: 320
+    marginBottom: 30,
+    paddingLeft: 15,
+    paddingRight: 15
   },
-  project: {}
+  project: {
+    marginBottom: 15
+  },
+  rem: {
+    overflowX: "hidden"
+  }
 });
 
 const projects = [
@@ -44,7 +49,7 @@ const projects = [
       "Develop a quality website with good UI and UX experience, user data privacy and managment."
   },
   {
-    title: "Library Managment System",
+    title: "Library Managment",
     description: "Designed and developed a library managment system.",
     languages: "Java, SQLite",
     link: "null",
@@ -59,12 +64,19 @@ const projects = [
 class Projects extends React.Component {
   render() {
     const { classes, filter } = this.props;
-    return projects.map((item, i) =>
+    const jobs = projects.map((item, i) =>
       item.languages.includes(filter) ? (
-        <div key={i} className={classes.root}>
+        <Grid item key={item.title} sm={6} xl={4} className={classes.project}>
           <Project item={item} className={classes.project} />
-        </div>
+        </Grid>
       ) : null
+    );
+    return (
+      <div className={classes.rem}>
+        <Grid container className={classes.root} spacing={16}>
+          {jobs}
+        </Grid>
+      </div>
     );
   }
 }

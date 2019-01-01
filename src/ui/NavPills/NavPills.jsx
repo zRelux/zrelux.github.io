@@ -143,14 +143,7 @@ class NavPills extends React.Component {
     this.setState({ active: index });
   };
   render() {
-    const {
-      classes,
-      tabs,
-      direction,
-      color,
-      horizontal,
-      alignCenter
-    } = this.props;
+    const { classes, tabs, color, horizontal, alignCenter } = this.props;
     const flexContainerClasses = classNames({
       [classes.flexContainer]: true,
       [classes.horizontalDisplay]: horizontal !== undefined
@@ -196,7 +189,7 @@ class NavPills extends React.Component {
     const tabContent = (
       <div className={classes.contentWrapper}>
         <SwipeableViews
-          axis={direction === "rtl" ? "x-reverse" : "x"}
+          axis={"x"}
           index={this.state.active}
           onChangeIndex={this.handleChangeIndex}
         >

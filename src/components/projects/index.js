@@ -14,7 +14,6 @@ import Projects from "./Projects";
 
 const styles = theme => ({
   root: {
-    overflowX: "hidden",
     overflowY: "hidden",
     flexGrow: 1,
     marginTop: 30
@@ -22,29 +21,6 @@ const styles = theme => ({
   about: {
     textAlign: "center",
     textDecoration: "underline"
-  },
-  card: {
-    marginTop: 67,
-    alignItems: "auto"
-  },
-  name: {
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: 500,
-    lineHeight: "normal",
-    fontSize: 20,
-    color: "rgba(0, 0, 0, 0.87)"
-  },
-  desc: {
-    textAlign: "left"
-  },
-  focus: {
-    textAlign: "left",
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    fontSize: 18,
-    color: "rgba(0, 0, 0, 0.87)"
   }
 });
 
@@ -63,8 +39,8 @@ class ProjectsScreen extends React.Component {
           <Grid item xs={10} sm={8}>
             <NavPills
               horizontal={{
-                tabsGrid: { xs: 12, sm: 12, md: 2 },
-                contentGrid: { xs: 12, sm: 12, md: 10 }
+                tabsGrid: { xs: 12, sm: 2 },
+                contentGrid: { xs: 12, sm: 10 }
               }}
               tabs={[
                 {
@@ -98,23 +74,28 @@ class ProjectsScreen extends React.Component {
 }
 
 export default withStyles(styles, { withTheme: true })(ProjectsScreen);
-/* <NavPills
-horizontal={{
-                tabsGrid: { xs: 12, sm: 12, md: 2 },
-                contentGrid: { xs: 12, sm: 12, md: 10 }
-              }}
-              tabs={[
-                {
-                  tabButton: "All",
-                  tabIcon: Dashboard,
-                  tabContent: <Projects filter=" " />
-                },
-                {
-                  tabButton: "PHP",
-                  tabIcon: Code,
-                  tabContent: <Projects filter="PHP" />
-                }
-              ]}
-            />
+/*           <NavPills
+            horizontal={{
+              tabsGrid: { xs: 12, sm: 2 },
+              contentGrid: { xs: 10, sm: 8 }
+            }}
+            tabs={[
+              {
+                tabButton: "All",
+                tabIcon: Dashboard,
+                tabContent: <Projects filter=" " />
+              },
+              {
+                tabButton: "PHP",
+                tabIcon: Code,
+                tabContent: <Projects filter="PHP" />
+              },
+              {
+                tabButton: "Java",
+                tabIcon: Code,
+                tabContent: <Projects filter="Java," />
+              }
+            ]}
+          />
 
                */

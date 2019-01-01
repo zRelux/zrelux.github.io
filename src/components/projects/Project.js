@@ -2,7 +2,6 @@ import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -11,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 
 import ModalProject from "./ModalProject";
+import { Divider } from "@material-ui/core";
 const styles = theme => ({
   card: {},
   media: {
@@ -25,6 +25,10 @@ const styles = theme => ({
     top: "50%",
     left: "50%",
     transform: `translate(-50%, -50%)`
+  },
+  description: {},
+  interior: {
+    padding: "10px 10px 0 10px"
   }
 });
 
@@ -62,22 +66,25 @@ class Project extends React.Component {
     return (
       <>
         <Card className={classes.card} elevation={6}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              alt={title + " image"}
-              className={classes.media}
-              height="140"
-              image={image}
-              title={title + " image"}
-            />
-            <CardContent>
+          <CardMedia
+            component="img"
+            alt={title + " image"}
+            className={classes.media}
+            height="140"
+            image={image}
+            title={title + " image"}
+          />
+          <CardContent>
+            <Divider />
+            <div className={classes.interior}>
               <Typography gutterBottom variant="h5" component="h2">
                 {title}
               </Typography>
-              <Typography component="p">{description}</Typography>
-            </CardContent>
-          </CardActionArea>
+              <Typography component="p" className={classes.description}>
+                {description}
+              </Typography>
+            </div>
+          </CardContent>
           <CardActions>
             {viewLink}
             {viewCode}
