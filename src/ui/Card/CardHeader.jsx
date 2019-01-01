@@ -12,8 +12,7 @@ import {
   successCardHeader,
   dangerCardHeader,
   infoCardHeader,
-  primaryCardHeader,
-  roseCardHeader
+  primaryCardHeader
 } from "../../assets/jss/material-dashboard-react.jsx";
 
 const styles = theme => ({
@@ -92,39 +91,33 @@ const styles = theme => ({
     }
   },
   warningCardHeader: {
-    color: "#FFFFFF",
+    color: "#04C2C9",
     "&:not($cardHeaderIcon)": {
       ...warningCardHeader
     }
   },
   successCardHeader: {
-    color: "#FFFFFF",
+    color: "#04C2C9",
     "&:not($cardHeaderIcon)": {
       ...successCardHeader
     }
   },
   dangerCardHeader: {
-    color: "#FFFFFF",
+    color: "#04C2C9",
     "&:not($cardHeaderIcon)": {
       ...dangerCardHeader
     }
   },
   infoCardHeader: {
-    color: "#FFFFFF",
+    color: "#04C2C9",
     "&:not($cardHeaderIcon)": {
       ...infoCardHeader
     }
   },
   primaryCardHeader: {
-    color: "#FFFFFF",
+    color: "#04C2C9",
     "&:not($cardHeaderIcon)": {
       ...primaryCardHeader
-    }
-  },
-  roseCardHeader: {
-    color: "#FFFFFF",
-    "&:not($cardHeaderIcon)": {
-      ...roseCardHeader
     }
   }
 });

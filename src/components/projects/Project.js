@@ -10,6 +10,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Modal from "@material-ui/core/Modal";
 
+import ModalProject from "./ModalProject";
 const styles = theme => ({
   card: {},
   media: {
@@ -17,7 +18,7 @@ const styles = theme => ({
   },
   paper: {
     position: "absolute",
-    width: theme.spacing.unit * 50,
+    width: theme.spacing.unit * 60,
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing.unit * 4,
@@ -42,14 +43,7 @@ class Project extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const {
-      title,
-      description,
-      languages,
-      link,
-      image,
-      github
-    } = this.props.item;
+    const { title, description, link, image, github } = this.props.item;
 
     const viewLink =
       link !== "null" ? (
@@ -57,6 +51,7 @@ class Project extends React.Component {
           View Live
         </Button>
       ) : null;
+
     const viewCode =
       github !== "null" ? (
         <Button size="small" color="primary" target="_blank" href={github}>
@@ -92,16 +87,12 @@ class Project extends React.Component {
           </CardActions>
         </Card>
         <Modal
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
+          aria-labelledby="Project modal"
           open={this.state.open}
           onClose={this.handleClose}
         >
           <div className={classes.paper}>
-            <Typography variant="h6" id="modal-title">
-              Text in a modal
-            </Typography>
-            <Typography variant="subtitle1" id="simple-modal-description" />
+            <ModalProject project={this.props.item} />
           </div>
         </Modal>
       </>

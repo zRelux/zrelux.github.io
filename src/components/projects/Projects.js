@@ -24,18 +24,25 @@ const projects = [
     title: "Luxury Construction",
     description:
       "Designed and developed the website of a construction company.",
-    languages: "HTML, CSS, JavaScript, PHP, MySQL",
+    languages: "HTML, CSS, JavaScript, PHP, MySQL, Materializecss",
     link: "https://luxuryconstruction.co.uk/",
     image: LuxImage,
-    github: "null"
+    github: "null",
+    product:
+      "Website of a construction company. Main features are the photo gallery and the services page. ",
+    problems: "Develop a quality website with good UI and UX experience."
   },
   {
     title: "Aziende Expo",
     description: "Designed and developed an online expo system.",
-    languages: "HTML, CSS, JavaScript, PHP, MySQL",
+    languages: "HTML, CSS, JavaScript, PHP, MySQL, Materializecss",
     link: "https://aziendeexpo.it/",
     image: AzieImage,
-    github: "https://github.com/zRelux/AziendeExpo"
+    github: "https://github.com/zRelux/AziendeExpo",
+    product:
+      "Website that works as an online expo system. Main features are the user managment, and paypal integration.",
+    problems:
+      "Develop a quality website with good UI and UX experience, user data privacy and managment."
   },
   {
     title: "Library Managment System",
@@ -43,7 +50,10 @@ const projects = [
     languages: "Java, SQLite",
     link: "null",
     image: LibImage,
-    github: "https://github.com/zRelux/librarymanagement"
+    github: "https://github.com/zRelux/librarymanagement",
+    product:
+      "Library managment system developed for local libraries. Main features are book notifications and data managment.",
+    problems: "Manage book data and work with local database."
   }
 ];
 
