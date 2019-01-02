@@ -12,6 +12,7 @@
     "react-particles-js": "^2.4.2",
     "react-scripts": "2.1.1",
     "react-scrollspy": "^3.3.5",
+    "react-share": "^2.4.0",
     "react-swipeable-views": "^0.13.0",
     "react-typing-animation": "^1.5.1"
   },

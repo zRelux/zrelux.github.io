@@ -28,6 +28,7 @@ import About from "./about/";
 import Projects from "./projects/";
 import Skills from "./skills/";
 import Education from "./education/";
+import Contact from "./contact/";
 
 const drawerWidth = 240;
 
@@ -106,10 +107,6 @@ const nav = [
   {
     title: "Contact",
     icon: <ContactIcon />
-  },
-  {
-    title: "Resume",
-    icon: <ResumeIcon />
   }
 ];
 class Navigation extends React.Component {
@@ -181,6 +178,18 @@ class Navigation extends React.Component {
                 <ListItemText primary={section.title} />
               </ListItem>
             ))}
+            <ListItem
+              button
+              selected={this.state.selectedIndex === 5}
+              component="a"
+              href="https://drive.google.com/open?id=1yfsovjnumUm-4iVfLcfqYxNlAhTmUmeR"
+              target="_blank"
+            >
+              <ListItemIcon>
+                <ResumeIcon />
+              </ListItemIcon>
+              <ListItemText primary={"Resume"} />
+            </ListItem>
           </List>
         </Drawer>
         <main
@@ -203,6 +212,9 @@ class Navigation extends React.Component {
           </section>
           <section id="Education" ref="Education">
             <Education />
+          </section>
+          <section id="Contact" ref="Contact">
+            <Contact />
           </section>
         </main>
       </div>
