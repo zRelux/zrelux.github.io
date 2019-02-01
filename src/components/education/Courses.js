@@ -1,10 +1,17 @@
 import React from "react";
 
 import ItiImage from "../../assets/img/iti.png";
+import UelImage from "../../assets/img/uel.png";
 import Course from "./Course";
 import { withStyles } from "@material-ui/core";
 
 const courses = [
+  {
+    course: "University of East London",
+    image: UelImage,
+    date: "2019-2022",
+    info: ["Computer Science"]
+  },
   {
     course: "I.T.I.S. Fermi Lucca | Secondary School",
     image: ItiImage,
