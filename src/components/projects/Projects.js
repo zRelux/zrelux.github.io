@@ -51,7 +51,7 @@ const projects = [
   },
   {
     title: "Library Managment",
-    description: "Designed and developed a library managment system.",
+    description: "Designed and developed a library managment system. ",
     languages: "Java, SQLite",
     link: "null",
     image: LibImage,
@@ -63,7 +63,7 @@ const projects = [
   {
     title: "Pub Games",
     description:
-      "Project under construction. Designing and developing a website for pub quizzes and games.",
+      "Designing and developing a website for pub quizzes and games.",
     languages: "HTML, CSS, JavaScript, React.js, Node.js, MongoDB",
     link: "https://pubgames.netlify.com/",
     image: PubGames,
