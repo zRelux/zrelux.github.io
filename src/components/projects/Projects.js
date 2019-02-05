@@ -7,6 +7,7 @@ import Project from "./Project";
 import LuxImage from "../../assets/img/LuxuryConstruction.png";
 import AzieImage from "../../assets/img/AziendeExpo.png";
 import LibImage from "../../assets/img/imageFrame.png";
+import PubGames from "../../assets/img/logo.png";
 import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
@@ -58,6 +59,17 @@ const projects = [
     product:
       "Library managment system developed for local libraries. Main features are book notifications and data managment.",
     problems: "Manage book data and work with local database."
+  },
+  {
+    title: "Pub Games",
+    description:
+      "Project under construction. Designing and developing a website for pub quizzes and games.",
+    languages: "HTML, CSS, JavaScript, React.js, Node.js, MongoDB",
+    link: "https://pubgames.netlify.com/",
+    image: PubGames,
+    github: "null",
+    product: "Online pub games website, trivia game is available.",
+    problems: "Setup data managment, and website handling."
   }
 ];
 
