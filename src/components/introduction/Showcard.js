@@ -58,6 +58,8 @@ class Showcard extends React.Component {
             <Typing.Backspace count={5} />
             <Typography variant="h5">Hello</Typography>
             <Typing.Delay ms={1000} />
+            <Typography variant="h5">こんにちは</Typography>
+            <Typing.Delay ms={1000} />
             <Typing.Backspace count={5} />
           </Typing>
           <Typography variant="h5">I'm Leonardo Drici.</Typography>
