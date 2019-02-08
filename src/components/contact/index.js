@@ -1,8 +1,8 @@
 import React from "react";
 
 //Material imports
-import { TwitterIcon, LinkedinIcon, EmailIcon } from "react-share";
-import { Typography, withStyles, Divider, Grid, Fab } from "@material-ui/core";
+import { SocialIcon } from "react-social-icons";
+import { Typography, withStyles, Divider, Grid } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
@@ -41,37 +41,13 @@ class CourseScreen extends React.Component {
           <Grid item xs={8} sm={4}>
             <Grid container>
               <Grid item xs className={classes.socialIcon}>
-                <Fab
-                  aria-label="twitter"
-                  className={classes.fab}
-                  component="a"
-                  href="https://twitter.com/Relux_EU"
-                  target="_blank"
-                >
-                  <TwitterIcon size={48} round />
-                </Fab>
+                <SocialIcon url="https://github.com/zRelux" />
               </Grid>
               <Grid item xs className={classes.socialIcon}>
-                <Fab
-                  aria-label="mail"
-                  className={classes.fab}
-                  component="a"
-                  href="mailto:leonard.drici@gmail.com"
-                  target="_blank"
-                >
-                  <EmailIcon size={48} round />
-                </Fab>
+                <SocialIcon url="mailto:leonard.drici@gmail.com" />
               </Grid>
               <Grid item xs className={classes.socialIcon}>
-                <Fab
-                  aria-label="linkedin"
-                  className={classes.fab}
-                  component="a"
-                  href="https://www.linkedin.com/in/leonardo-drici/"
-                  target="_blank"
-                >
-                  <LinkedinIcon size={48} round />
-                </Fab>
+                <SocialIcon url="https://www.linkedin.com/in/leonardo-drici/" />
               </Grid>
             </Grid>
           </Grid>
