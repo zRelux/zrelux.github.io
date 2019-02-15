@@ -8,6 +8,7 @@ import LuxImage from "../../assets/img/LuxuryConstruction.png";
 import AzieImage from "../../assets/img/AziendeExpo.png";
 import LibImage from "../../assets/img/imageFrame.png";
 import PubGames from "../../assets/img/logo.png";
+import Java from "../../assets/img/java.png";
 import { Grid } from "@material-ui/core";
 
 const styles = theme => ({
@@ -70,6 +71,30 @@ const projects = [
     github: "null",
     product: "Online pub games website, trivia game is available.",
     problems: "Setup data managment, and website handling."
+  },
+  {
+    title: "Address Book",
+    description: "Designed and developed a address book system.",
+    languages: "Java, Sockets, Swing",
+    link: "null",
+    image: Java,
+    github: "https://github.com/zRelux/Address-Book",
+    product:
+      "Address Book system developed for local companies. Main features are client server communication and UI.",
+    problems:
+      "Manage the data for the address book with files, and protocol usage."
+  },
+  {
+    title: "Banker algorithm",
+    description:
+      "Developed the banker algorithm by Dijkstra. In java with the use of threds. ",
+    languages: "Java, Threads",
+    link: "null",
+    image: Java,
+    github: "https://github.com/zRelux/Banker-algorithm",
+    product:
+      "Implementation of the banker algorithm by dijistra, using threds and swing for GUI.",
+    problems: "Manage threds to work all together."
   }
 ];
 
