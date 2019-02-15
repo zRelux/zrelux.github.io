@@ -1,12 +1,11 @@
 import React from "react";
 
-import Typing from "react-typing-animation";
-
 //material imports
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import Typist from "react-typist";
 
 const styles = theme => ({
   root: {
@@ -33,6 +32,16 @@ const styles = theme => ({
 });
 
 class Showcard extends React.Component {
+  state = {
+    typing: true
+  };
+
+  done = () => {
+    this.setState({ typing: false }, () => {
+      this.setState({ typing: true });
+    });
+  };
+
   viewWork = () => {
     var aboutSection = document.getElementById("About");
     window.scrollTo({
@@ -46,23 +55,28 @@ class Showcard extends React.Component {
     return (
       <Paper className={classes.root} elevation={2}>
         <>
-          <Typing loop speed={120}>
-            <Typography variant="h5">Hi</Typography>
-            <Typing.Delay ms={1000} />
-            <Typing.Backspace count={2} />
-            <Typography variant="h5">Ciao</Typography>
-            <Typing.Delay ms={1000} />
-            <Typing.Backspace count={4} />
-            <Typography variant="h5">Ckemi</Typography>
-            <Typing.Delay ms={1000} />
-            <Typing.Backspace count={5} />
-            <Typography variant="h5">Hello</Typography>
-            <Typing.Delay ms={1000} />
-            <Typing.Backspace count={5} />
-            <Typography variant="h5">こんにちは</Typography>
-            <Typing.Delay ms={1000} />
-            <Typing.Backspace count={5} />
-          </Typing>
+          {this.state.typing ? (
+            <Typist
+              onTypingDone={this.done}
+              stdTypingDelay={250}
+              avgTypingDelay={250}
+              cursor={{ show: false }}
+            >
+              <Typography variant="h5">Hi</Typography>
+              <Typist.Backspace count={2} delay={200} />
+              <Typography variant="h5">Ciao</Typography>
+              <Typist.Backspace count={4} delay={200} />
+              <Typography variant="h5">Ckemi</Typography>
+              <Typist.Backspace count={5} delay={200} />
+              <Typography variant="h5">Hello</Typography>
+              <Typist.Backspace count={5} delay={200} />
+              <Typography variant="h5">こんにちは</Typography>
+              <Typist.Backspace count={5} delay={200} />
+            </Typist>
+          ) : (
+            ""
+          )}
+
           <Typography variant="h5">I'm Leonardo Drici.</Typography>
         </>
         <div className={classes.newline}>
