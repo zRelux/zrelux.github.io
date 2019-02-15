@@ -27,8 +27,7 @@ const styles = theme => ({
   center: {
     WebkitAlignSelf: "center",
     alignSelf: "center"
-  },
-  newline: {}
+  }
 });
 
 class Showcard extends React.Component {
