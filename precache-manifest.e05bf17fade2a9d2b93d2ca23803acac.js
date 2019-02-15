@@ -4,6 +4,10 @@ self.__precacheManifest = [
     "url": "/static/media/logo.c8cccdc8.png"
   },
   {
+    "revision": "5f69a3d10d93a9855b50a0ee976b2414",
+    "url": "/static/media/java.5f69a3d1.png"
+  },
+  {
     "revision": "ca8c518ac701cf2e41cb39045604912b",
     "url": "/static/media/iti.ca8c518a.png"
   },
@@ -20,19 +24,19 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "ca837be2763632d53e26",
-    "url": "/static/js/main.ca837be2.chunk.js"
+    "revision": "b39c8292e16129dbece2",
+    "url": "/static/js/main.b39c8292.chunk.js"
   },
   {
-    "revision": "f055423eba421849c825",
-    "url": "/static/js/1.f055423e.chunk.js"
+    "revision": "94e00b3391b983bffb15",
+    "url": "/static/js/1.94e00b33.chunk.js"
   },
   {
-    "revision": "ca837be2763632d53e26",
-    "url": "/static/css/main.c345e9f0.chunk.css"
+    "revision": "b39c8292e16129dbece2",
+    "url": "/static/css/main.f91492ed.chunk.css"
   },
   {
-    "revision": "55bb3571ba08a71bef8a26a94bd19ce1",
+    "revision": "65a4993aec72b49a754a94c05fbcae15",
     "url": "/index.html"
   }
 ];
