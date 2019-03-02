@@ -29,6 +29,7 @@ import Projects from "./projects/";
 import Skills from "./skills/";
 import Education from "./education/";
 import Contact from "./contact/";
+import Resume from "./resume/";
 
 const drawerWidth = 240;
 
@@ -182,7 +183,7 @@ class Navigation extends React.Component {
               button
               selected={this.state.selectedIndex === 5}
               component="a"
-              href="https://drive.google.com/open?id=197LnnjQHx-Zkyk-lyVqfsOKtNwBR9XU1"
+              href="https://drive.google.com/open?id=11Ri8KeGZdhFfo_cpZm1MXQPx66sTDgNy"
               target="_blank"
             >
               <ListItemIcon>
@@ -212,6 +213,9 @@ class Navigation extends React.Component {
           </section>
           <section id="Education" ref="Education">
             <Education />
+          </section>
+          <section>
+            <Resume />
           </section>
           <section id="Contact" ref="Contact">
             <Contact />
